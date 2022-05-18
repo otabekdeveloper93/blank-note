@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+body .bg-img{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    color: rgb(130, 35, 250);
+    width: 36%;
+    height: 80%;
+    background: linear-gradient(270deg, rgba(250,250,250,0.8) 0%, rgba(175,232,218,0.5) 100%);
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    z-index: 1000;
+}
+.title h1{
+    padding-top: 10px;
+    text-align: center;
+}
+.anim{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+}
+.box1{
+    top: 80%;
+    left: 30%;
+    animation: boxAnim1 10s infinite;
+}
+.box2{
+    top: 10%;
+    left: 25%;
+    animation: boxAnim2 4s infinite;
+    animation-delay: 1s;
+
+}
+
+.box4{
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    animation: boxAnim4 4s infinite;
+}
+.box4 img{
+    width: 100%;
+    height: 100%;
+}
+.anim img{
+    width: 100%;
+    height: auto;
+}
+.form{
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 40px;
+}
+.form input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid #fff;
+    font-size: 18px;
+    color: rgb(130, 35, 250);
+    padding-bottom: 5px;
+}
+.form input:focus{
+    outline: none;
+    background-color: transparent;
+}
+.text-note{
+    width:  100%;
+    display: block;
+    padding: 0 10px;
+    margin-bottom: 30px;
+}
+.price-number{
+    width: 60%;
+    display: inline-block;
+    margin-right: 30px;
+    padding-left: 10px;
+}
+.add-btn{
+    border: none;
+    background-color: #fff;
+    color: rgb(130, 35, 250);
+    font-size: 18px;
+    padding: 8px 20px;
+    border-radius: 10px;
+}
+
+.list-container{
+    list-style: none;
+    width: 90%;
+    margin: 0 auto;
+    height: 55%;
+    margin-top: 3%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.607);
+    overflow-y: auto;
+}
+.list-container li{
+    display: flex;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    justify-content: space-between;
+    padding: 0 10px 5px 10px;
+    border-bottom: 1px solid rgb(130, 35, 250);
+}
+.bx-trash{
+    color: #e33;
+    font-size: 20px;
+}
+.bx-trash:hover{
+    transform: scale(1.1);
+}
+.complited{
+    text-decoration: line-through rgb(130, 35, 250);
+}
+.total-price{
+    margin-top: 8px;
+    text-align: center;
+}
+.list-item.d-none{
+    display: none;
+}
+@keyframes boxAnim1 {
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+@keyframes boxAnim2 {
+
+    50%{
+        transform: translateY(25px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes boxAnim4 {
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
